@@ -6,7 +6,7 @@ This is a seat booking system that allows users to book and reset their seat res
 - **User Authentication**: Users can log in using their email and password.
 - **Seat Booking**: Users can book seats by selecting available ones.
 - **Seat Reset**: Admins can reset all seat bookings.
-- **Concurrency Control**: Prevents users from booking already booked seats using server-side validation.
+
 
 ---
 
@@ -110,28 +110,8 @@ This is a seat booking system that allows users to book and reset their seat res
 
 ---
 
-#### 3. **Seat Locking (Optional for Concurrency Control)**
 
-##### POST `/api/seats/lock`
-- **Description**: Locks the selected seats for a user before booking.
-- **Request Body**:
-    ```json
-    {
-        "seatIds": [1, 2],
-        "userId": "user123"
-    }
-    ```
-- **Response**:
-    - **200 OK**:
-        ```json
-        {
-            "message": "Seats locked successfully"
-        }
-        ```
-    - **409 Conflict**: The seats are already locked or booked
-    - **500 Internal Server Error**: Server-side error
 
----
 
 ### Frontend
 
@@ -141,13 +121,7 @@ The frontend allows users to view available seats, select them, and book them. I
 
 ---
 
-### Concurrency Handling
 
-1. **Server-Side Validation**: When booking seats, the server checks if the requested seats are available. If any of the seats are already booked, the booking will be rejected with a `409 Conflict` status.
-
-2. **Seat Locking**: The `/api/seats/lock` endpoint locks the requested seats temporarily for a specific user before completing the booking. This prevents other users from booking the same seat during the locking period.
-
----
 
 ### Error Handling
 
