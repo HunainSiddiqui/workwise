@@ -19,7 +19,7 @@ export default function InputBox({ fetchData }: InputBoxProps) {
 
         setLoading(true);
         try {
-            await axios.post("http://localhost:3000/api/v1/seat/book", {
+            await axios.post("https://workwise-backend-hunain.onrender.com/api/v1/seat/book", {
                 numOfSeats: numberOfSeats,
             },  {
                 headers: {
@@ -42,7 +42,7 @@ export default function InputBox({ fetchData }: InputBoxProps) {
     const handleResetBooking = async () => {
         setLoading(true);
         try {
-            await axios.post("http://localhost:3000/api/v1/seat/reset", {}, {
+            await axios.post("https://workwise-backend-hunain.onrender.com/api/v1/seat/reset", {}, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": "Bearer " + localStorage.getItem("token"),

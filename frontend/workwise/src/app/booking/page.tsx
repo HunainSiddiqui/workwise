@@ -17,7 +17,7 @@ function Booking() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/seat/seats",{
+      const response = await axios.get("https://workwise-backend-hunain.onrender.com/api/v1/seat/seats",{
         headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer " + localStorage.getItem("token"),

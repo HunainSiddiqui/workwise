@@ -21,7 +21,7 @@ const Signup = () => {
 
     try {
       // Example POST request to signup endpoint
-      const response = await fetch("http://localhost:3000/api/v1/user/signup", {
+      const response = await fetch("https://workwise-backend-hunain.onrender.com/api/v1/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
