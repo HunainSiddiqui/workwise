@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model User {
+  id        Int      @id @default(autoincrement())
+  fullname  String @default("Unknown")
+  email     String   @unique
+  password  String
+   seats    Seat[]  
+}
+
+model Seat{
+  id Int @id @default(autoincrement())
+  seat_number Int 
+  isavailable Boolean  @default(true)
+  row Int
+  userId      Int?    // Nullable for unbooked seats
+  user        User?   @relation(fields: [userId], references: [id])
+}
+
+
+
+
+
+
