@@ -33,7 +33,7 @@ This is a seat booking system that allows users to book and reset their seat res
 3. Set up environment variables:
     Create a `.env` file in the root directory and add the following variables:
     ```
-    MONGO_URI=your-mongo-db-uri
+    Database_URI=your-mongo-db-uri
     JWT_SECRET=your-secret-key
     PORT=3000
     ```
