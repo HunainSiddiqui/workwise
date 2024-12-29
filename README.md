@@ -14,7 +14,7 @@ This is a seat booking system that allows users to book and reset their seat res
 
 #### Prerequisites:
 - Node.js (v16+)
-- MongoDB (or any database of your choice)
+- Postgres SQL with prisma orm (or any database of your choice)
 - Postman or any API client for testing
 
 #### Steps to Set Up the Project:
