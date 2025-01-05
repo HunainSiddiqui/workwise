@@ -1,6 +1,6 @@
 # Seat Booking System
 
-This is a seat booking system that allows users to book and reset their seat reservations. The system includes a backend API built using Node.js, Express, and MongoDB. The frontend allows users to book seats, view seat availability, and reset bookings.
+This is a seat booking system that allows users to book and reset their seat reservations. The system includes a backend API built using Node.js, Express, and PostgresSQL. The frontend allows users to book seats, view seat availability, and reset bookings.
 
 ### Features:
 - **User Authentication**: Users can log in using their email and password.
